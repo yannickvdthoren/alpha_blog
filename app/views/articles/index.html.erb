@@ -1,0 +1,22 @@
+<h1>Articles listing page</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.title %></td>
+      <td><%= article.description %></td>
+      <td><%= link_to 'View', article %></td>
+    </tr>
+    <% end %>
+    <tr>
+    <td><%= link_to 'New article', 'articles/new' %></td>
+    </tr>
+  </tbody>
+</table>
